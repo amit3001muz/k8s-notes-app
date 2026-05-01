@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: github-self
+    runs-on: [self-hosted, Windows, X64]
 
     steps:
 
