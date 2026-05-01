@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: github-self
 
     steps:
 
@@ -29,3 +29,7 @@ jobs:
       run: |
         docker build -t amit3001muz/notes-frontend:latest ./frontend
         docker push amit3001muz/notes-frontend:latest
+
+    - name: Deploy to Kubernetes
+      run: |
+        kubectl apply -f k8s/    
